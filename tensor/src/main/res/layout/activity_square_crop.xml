@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/durban_Toolbar.PopupTheme"
+        app:navigationIcon="@drawable/durban_ic_back_white"/>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        style="@style/durban_MatchParent"
+        android:layout_below="@id/toolbar"
+        android:background="@color/durban_CropBackground">
+
+        <ImageView
+            android:id="@+id/image_view_logo"
+            android:layout_width="@dimen/durban_dp_200"
+            android:layout_height="@dimen/durban_dp_200"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/durban_vector_ic_crop_logo"
+            tools:ignore="MissingPrefix"/>
+
+        <com.yanzhenjie.durban.view.CropView
+            android:id="@+id/crop_view"
+            style="@style/durban_MatchParent"
+            android:alpha="0"/>
+
+    </FrameLayout>
+</RelativeLayout>
